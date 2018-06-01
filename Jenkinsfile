@@ -17,7 +17,7 @@ pipeline {
       }
       input {
         message 'Which Version?'
-        id 'Deploy'
+        ok 'Deploy'
         parameters {
           choice(name: 'APP_VERSION', choices: '''v1.1
 v1.2
