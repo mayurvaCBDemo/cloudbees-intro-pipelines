@@ -29,6 +29,11 @@ pipeline {
         echo "${KERNEL_VERSION}"
       }
     }
+    stage('Checkpoint') {
+      steps {
+        checkpoint 'Checkpoint'
+      }
+    }
     stage('Testing') {
       failFast true
       parallel {
